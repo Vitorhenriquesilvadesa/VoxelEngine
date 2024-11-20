@@ -1,7 +1,35 @@
-workspace "VoxelEngine"
+workspace "ZenEngine"
     configurations { "Debug", "Release" }
     architecture "x64"
-    startproject "VoxelEngine"
+    startproject "ZenEngine"
+
+project "GLM"
+    location "GLM"
+    kind "StaticLib"
+    language "C++"
+    targetdir "bin/%{cfg.buildcfg}/GLM"
+    objdir "bin-int/%{cfg.buildcfg}/GLM"
+
+    files {
+        "GLM/**.hpp",
+        "GLM/*.hpp",
+        "GLM/glm.cpp"
+    }
+
+    includedirs {
+        "GLM/glm"
+    }
+
+    filter "system:windows"
+        systemversion "latest"
+
+    filter "configurations:Debug"
+        runtime "Debug"
+        symbols "On"
+
+    filter "configurations:Release"
+        runtime "Release"
+        optimize "On"
 
 project "GLFW"
     location "GLFW"
@@ -55,27 +83,33 @@ project "GLAD"
         runtime "Release"
         optimize "On"
 
-project "VoxelEngine"
-    location "VoxelEngine"
+project "ZenEngine"
+    location "ZenEngine"
     kind "ConsoleApp"
     language "C++"
-    cppdialect "C++17"
-    targetdir "bin/%{cfg.buildcfg}/VoxelEngine"
-    objdir "bin-int/%{cfg.buildcfg}/VoxelEngine"
+    cppdialect "C++20"
+    targetdir "bin/%{cfg.buildcfg}/ZenEngine"
+    objdir "bin-int/%{cfg.buildcfg}/ZenEngine"
 
     files {
-        "VoxelEngine/src/**.h",
-        "VoxelEngine/src/**.cpp"
+        "ZenEngine/src/**.h",
+        "ZenEngine/src/**.cpp"
     }
 
     includedirs {
         "GLFW/include",
-        "GLAD/include"
+        "GLAD/include",
+        "GLM",
+        "ZenEngine/src/Engine",
+        "ZenEngine/src/Engine/Component",
+        "ZenEngine/src/Engine/Rendering",
+        "ZenEngine/src",
     }
 
     links {
         "GLFW",
         "GLAD",
+        "GLM",
         "opengl32"
     }
 
@@ -84,11 +118,11 @@ project "VoxelEngine"
         defines { "VX_PLATFORM_WINDOWS" }
 
     filter "configurations:Debug"
-        defines { "VX_DEBUG" }
+        defines { "ZEN_DEBUG" }
         runtime "Debug"
         symbols "On"
 
     filter "configurations:Release"
-        defines { "VX_RELEASE" }
+        defines { "ZEN_RELEASE" }
         runtime "Release"
         optimize "On"

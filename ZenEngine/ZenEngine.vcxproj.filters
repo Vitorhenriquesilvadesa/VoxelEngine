@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Debug">
+      <UniqueIdentifier>{0C95060D-78A9-2EBE-412B-D21DADFE2AEF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{DBC7D3B0-C769-FE86-B024-12DB9C6585D7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Component">
+      <UniqueIdentifier>{FD6DB9BA-E966-D80C-1299-BD91FEF0B718}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Rendering">
+      <UniqueIdentifier>{E85EBB83-D457-DAD5-FD89-BF5AE9E1B9E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Rendering\Context">
+      <UniqueIdentifier>{7C4188E1-6866-D761-91B1-BCF17D35D67F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Rendering\Renderer">
+      <UniqueIdentifier>{8EE783E7-FAA9-B771-435A-46FEAF5B904F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Service">
+      <UniqueIdentifier>{3BAC417F-277A-3585-100E-A6ABFC7A11EA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{23A78D7C-0FDE-8E0D-B8CA-7410A4E00A0F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Debug\Logger.h">
+      <Filter>Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Component\Component.h">
+      <Filter>Engine\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Engine.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\EngineFlags.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Flags.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Rendering\Context\GraphicContext.h">
+      <Filter>Engine\Rendering\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Rendering\Context\RenderingAPI.h">
+      <Filter>Engine\Rendering\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Rendering\Context\Window.h">
+      <Filter>Engine\Rendering\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Rendering\Renderer\Material.h">
+      <Filter>Engine\Rendering\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Rendering\Renderer\Mesh.h">
+      <Filter>Engine\Rendering\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Rendering\Renderer\Texture.h">
+      <Filter>Engine\Rendering\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Service\ApplicationService.h">
+      <Filter>Engine\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util\Metrics.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util\Types.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Rendering\Renderer\Shader.h" />
+    <ClInclude Include="src\Engine\Rendering\Renderer\MeshRenderer.h" />
+    <ClInclude Include="src\Engine\Component\Entity.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Engine\Engine.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Rendering\Context\GraphicContext.cpp">
+      <Filter>Engine\Rendering\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Rendering\Context\RenderingAPI.cpp">
+      <Filter>Engine\Rendering\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Rendering\Context\Window.cpp">
+      <Filter>Engine\Rendering\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Engine\Component\Component.cpp" />
+  </ItemGroup>
+</Project>
