@@ -126,3 +126,30 @@ project "ZenEngine"
         defines { "ZEN_RELEASE" }
         runtime "Release"
         optimize "On"
+
+project "ImGui"
+    location "ImGui"
+    kind "StaticLib"
+    language "C++"
+    cppdialect "C++20"
+    targetdir "bin/%{cfg.buildcfg}/ImGui"
+    objdir "bin-int/%{cfg.buildcfg}/ImGui"
+
+    files {
+        "ImGui/**.h",
+        "ImGui/**.cpp"
+    }
+
+    filter "system:windows"
+        systemversion "latest"
+        defines { "VX_PLATFORM_WINDOWS" }
+
+    filter "configurations:Debug"
+        defines { "ZEN_DEBUG" }
+        runtime "Debug"
+        symbols "On"
+
+    filter "configurations:Release"
+        defines { "ZEN_RELEASE" }
+        runtime "Release"
+        optimize "On"

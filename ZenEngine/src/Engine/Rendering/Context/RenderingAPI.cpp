@@ -11,7 +11,7 @@ namespace Zen
 		mContext = GraphicContext();
 	}
 
-	bool RenderingAPI::IsWindowCloseRequested()
+	bool RenderingAPI::IsWindowCloseRequested() const
 	{
 		return mContext.IsWindowClosed();
 	}
@@ -19,7 +19,7 @@ namespace Zen
 	void RenderingAPI::Init()
 	{
 		mContext.Init();
-		Engine::RegisterFlag(ApplicationFlag::WindowClosed, [this]() { return IsWindowCloseRequested(); });
+		Engine::RegisterFlag(ApplicationFlag::WindowClosed, [this] { return IsWindowCloseRequested(); });
 	}
 
 	void RenderingAPI::Update() 

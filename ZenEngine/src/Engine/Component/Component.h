@@ -1,21 +1,20 @@
 #pragma once
 
 #include <Util/Types.h>
-#include <unordered_map>
-#include <typeindex>
 
 namespace Zen
 {
-	class Entity;
+    class Entity;
 
-	class Component
-	{
-	public:
-		virtual void Start();
-		virtual void Update();
-		virtual void Dispose();
+    class Component
+    {
+    public:
+        virtual ~Component() = default;
+        virtual void Start() = 0;
+        virtual void Update() = 0;
+        virtual void Dispose() = 0;
 
-	protected:
-		Ref<Entity> gameObject;
-	};
+    protected:
+        Ref<Entity> gameObject;
+    };
 }

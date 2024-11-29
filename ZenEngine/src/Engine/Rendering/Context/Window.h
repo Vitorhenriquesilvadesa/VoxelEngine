@@ -15,14 +15,14 @@ namespace Zen
 
 		Size GetSize() const { return mSize; }
 		Color GetBackgroundColor() const { return mBackgroundColor; }
-		ZenWindowID* GetNativeWindowID();
+		ZenWindowID* GetNativeWindowID() const;
 
 		void SetSize(Size size);
 		void SetBackgroundColor(Color color);
 
-		void Clear();
-		void SwapBuffers();
-		void PollEvents();
+		void Clear() const;
+		void SwapBuffers() const;
+		void PollEvents() const;
 
 	private:
 		Size mSize;

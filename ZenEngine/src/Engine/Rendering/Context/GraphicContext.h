@@ -9,10 +9,10 @@ namespace Zen
 	{
 	public:
 		void Init();
-		void Clear();
-		void SwapBuffers();
-		void PollEvents();
-		bool IsWindowClosed();
+		void Clear() const;
+		void SwapBuffers() const;
+		void PollEvents() const;
+		bool IsWindowClosed() const;
 
 	private:
 		Ref<Window> mWindow;

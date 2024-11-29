@@ -9,10 +9,11 @@ namespace Zen
 	{
 		
 	public:
+		virtual ~RenderingAPI() = default;
 
 		RenderingAPI();
 
-		bool IsWindowCloseRequested();
+		bool IsWindowCloseRequested() const;
 		void Init() override;
 		void Update() override;
 		void Shutdown() override;

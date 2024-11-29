@@ -16,9 +16,6 @@
     <Filter Include="Engine\Rendering\Context">
       <UniqueIdentifier>{7C4188E1-6866-D761-91B1-BCF17D35D67F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Rendering\Renderer">
-      <UniqueIdentifier>{8EE783E7-FAA9-B771-435A-46FEAF5B904F}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\Service">
       <UniqueIdentifier>{3BAC417F-277A-3585-100E-A6ABFC7A11EA}</UniqueIdentifier>
     </Filter>
@@ -31,6 +28,9 @@
       <Filter>Debug</Filter>
     </ClInclude>
     <ClInclude Include="src\Engine\Component\Component.h">
+      <Filter>Engine\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Component\Entity.h">
       <Filter>Engine\Component</Filter>
     </ClInclude>
     <ClInclude Include="src\Engine\Engine.h">
@@ -51,15 +51,6 @@
     <ClInclude Include="src\Engine\Rendering\Context\Window.h">
       <Filter>Engine\Rendering\Context</Filter>
     </ClInclude>
-    <ClInclude Include="src\Engine\Rendering\Renderer\Material.h">
-      <Filter>Engine\Rendering\Renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Engine\Rendering\Renderer\Mesh.h">
-      <Filter>Engine\Rendering\Renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Engine\Rendering\Renderer\Texture.h">
-      <Filter>Engine\Rendering\Renderer</Filter>
-    </ClInclude>
     <ClInclude Include="src\Engine\Service\ApplicationService.h">
       <Filter>Engine\Service</Filter>
     </ClInclude>
@@ -69,11 +60,11 @@
     <ClInclude Include="src\Util\Types.h">
       <Filter>Util</Filter>
     </ClInclude>
-    <ClInclude Include="src\Engine\Rendering\Renderer\Shader.h" />
-    <ClInclude Include="src\Engine\Rendering\Renderer\MeshRenderer.h" />
-    <ClInclude Include="src\Engine\Component\Entity.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Engine\Component\Component.cpp">
+      <Filter>Engine\Component</Filter>
+    </ClCompile>
     <ClCompile Include="src\Engine\Engine.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
@@ -87,6 +78,5 @@
       <Filter>Engine\Rendering\Context</Filter>
     </ClCompile>
     <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="src\Engine\Component\Component.cpp" />
   </ItemGroup>
 </Project>
